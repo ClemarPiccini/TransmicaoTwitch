@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transmicao-twitch"
+version = "1.0.0"
+description = "Transmite 2 cameras Yoosee lado a lado para a Twitch usando FFmpeg"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+transmitir-twitch = "transmicao_twitch.main:main"
+
+[tool.setuptools]
+# A pasta src/ e instalada como o pacote "transmicao_twitch"
+packages = ["transmicao_twitch"]
+package-dir = { "transmicao_twitch" = "src" }
